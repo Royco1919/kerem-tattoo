@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -57,7 +58,7 @@
       <div class="filters" aria-label="Filter work">
         <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
         <button class="chip" type="button" data-filter="pets" aria-pressed="false">Pets</button>
-        <button class="chip" type="button" data-filter="portraits" aria-pressed="false">Portraits</button>
+        <button class="chip" type="button" data-filter="studio" aria-pressed="false">Studio</button>
         <button class="chip" type="button" data-filter="objects" aria-pressed="false">Objects</button>
       </div>
     </div>
@@ -70,15 +71,15 @@
       <button class="tile reveal" type="button" data-index="5" data-cat="pets" style="--i:5"><img src="img/tattoo-07.jpg" width="480" height="640" alt="Portrait of a cat" loading="lazy"><span class="tile__cap">Cat portrait <em>· forearm</em></span></button>
       <button class="tile reveal" type="button" data-index="6" data-cat="objects" style="--i:6"><img src="img/tattoo-12.jpg" width="640" height="640" alt="Two vases with birds and flowers" loading="lazy"><span class="tile__cap">Two vases <em>· both forearms</em></span></button>
       <button class="tile reveal" type="button" data-index="7" data-cat="objects" style="--i:7"><img src="img/tattoo-01.jpg" width="512" height="640" alt="Plate with fish" loading="lazy"><span class="tile__cap">Plate with fish <em>· upper arm</em></span></button>
-      <button class="tile reveal" type="button" data-index="8" data-cat="portraits" style="--i:8"><img src="img/tattoo-03.jpg" width="480" height="640" alt="Victorian mirror stencil before tattooing" loading="lazy"><span class="tile__cap">Mirror, stencil stage <em>· thigh</em></span></button>
-      <button class="tile reveal" type="button" data-index="9" data-cat="portraits" style="--i:9"><img src="img/tattoo-02.jpg" width="360" height="640" alt="Kerem Studio sign among monstera leaves" loading="lazy"><span class="tile__cap">Kerem Studio <em>· Haifa</em></span></button>
+      <button class="tile reveal" type="button" data-index="8" data-cat="studio" style="--i:8"><img src="img/tattoo-03.jpg" width="480" height="640" alt="Victorian mirror stencil before tattooing" loading="lazy"><span class="tile__cap">Mirror, stencil stage <em>· thigh</em></span></button>
+      <button class="tile reveal" type="button" data-index="9" data-cat="studio" style="--i:9"><img src="img/tattoo-02.jpg" width="360" height="640" alt="Kerem Studio sign among monstera leaves" loading="lazy"><span class="tile__cap">Kerem Studio <em>· Haifa</em></span></button>
     </div>
   </section>
 
   <section class="loupe-section" id="detail">
     <div class="section-head">
       <h2 class="label">The detail</h2>
-      <p class="muted">Needle-level work. Move over the image.</p>
+      <p class="muted">Needle-level work. <span class="only-fine">Move over the image.</span><span class="only-coarse">Press and hold the image.</span></p>
     </div>
     <div class="loupe reveal" id="loupe" data-zoom="2.5">
       <img class="loupe__img" src="img/tattoo-11.jpg" width="480" height="640" alt="Portrait of a husky, large view" loading="lazy">

@@ -1,8 +1,6 @@
 (() => {
   'use strict';
 
-  document.getElementById('year').textContent = new Date().getFullYear();
-
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const tiles = [...document.querySelectorAll('.tile')];
   const items = tiles.map(t => {

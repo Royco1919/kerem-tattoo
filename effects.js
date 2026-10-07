@@ -86,6 +86,7 @@
       const show = f === 'all' || t.dataset.cat === f;
       if (show) {
         t.classList.remove('is-gone');
+        t.classList.add('is-shown');
         requestAnimationFrame(() => requestAnimationFrame(() => t.classList.remove('is-out')));
       } else {
         t.classList.add('is-out');
@@ -116,11 +117,22 @@
       };
       const on = () => { if (!active) { active = true; measure(); loupe.classList.add('is-active'); } };
       const off = () => { active = false; loupe.classList.remove('is-active'); };
+      let hold = 0;
       loupe.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') { on(); move(e.clientX, e.clientY); } });
-      loupe.addEventListener('pointerdown', e => { on(); move(e.clientX, e.clientY); loupe.setPointerCapture(e.pointerId); });
-      loupe.addEventListener('pointermove', e => { if (active) move(e.clientX, e.clientY); });
-      loupe.addEventListener('pointerup', e => { if (e.pointerType !== 'mouse') off(); });
-      loupe.addEventListener('pointercancel', off);
+      loupe.addEventListener('pointerdown', e => {
+        rect = null;
+        if (e.pointerType === 'mouse') { on(); move(e.clientX, e.clientY); return; }
+        // touch: long-press (250ms) activates; a quick flick keeps scrolling the page
+        clearTimeout(hold);
+        hold = setTimeout(() => { on(); move(e.clientX, e.clientY); try { loupe.setPointerCapture(e.pointerId); } catch (_) {} }, 250);
+      });
+      loupe.addEventListener('pointermove', e => {
+        if (!active) { if (e.pointerType !== 'mouse') clearTimeout(hold); return; }
+        if (e.pointerType !== 'mouse' && rect && (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom)) { off(); return; }
+        move(e.clientX, e.clientY);
+      });
+      loupe.addEventListener('pointerup', e => { clearTimeout(hold); if (e.pointerType !== 'mouse') off(); });
+      loupe.addEventListener('pointercancel', () => { clearTimeout(hold); off(); });
       loupe.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') off(); });
       addEventListener('resize', () => { rect = null; });
       addEventListener('scroll', () => { rect = null; }, { passive: true });
