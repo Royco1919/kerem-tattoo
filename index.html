@@ -10,70 +10,124 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="img/tattoo-01.jpg"><!-- TODO on deploy: make absolute, add og:url -->
 <meta name="theme-color" content="#0b0b0b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="nav">
+<header class="nav" id="nav">
   <a class="nav__brand" href="#top">Kerem Gavriel</a>
   <nav class="nav__links" aria-label="Site">
     <a href="#work">Work</a>
+    <a href="#process">Process</a>
     <a href="#about">About</a>
-    <a href="#book">Book</a>
+    <a class="nav__cta" href="https://wa.me/message/LAB4DCIWYGBON1" target="_blank" rel="noopener">Book</a>
   </nav>
 </header>
 
 <main id="top">
   <section class="hero">
-    <div class="hero__text">
-      <p class="eyebrow">Tattoo artist · Haifa</p>
-      <h1 class="display">Kerem<br>Gavriel</h1>
-      <p class="lede">Micro realism. Fine lines, small details, a tattoo that stays with you.</p>
+    <p class="label hero__eyebrow">Micro realism · Haifa, Israel</p>
+    <h1 class="hero__title" aria-label="Kerem Gavriel">
+      <span class="hero__line" data-split>Kerem</span>
+      <span class="hero__line hero__line--2" data-split>Gavriel</span>
+    </h1>
+    <figure class="hero__img" data-parallax>
+      <img src="img/tattoo-01.jpg" width="512" height="640" alt="Micro-realism tattoo of a plate with fish on an upper arm" fetchpriority="high">
+    </figure>
+    <div class="hero__foot">
+      <p class="hero__lede">Fine lines. Small details.<br>A tattoo that stays with you.</p>
       <div class="cta-row">
         <a class="btn btn--primary" href="https://wa.me/message/LAB4DCIWYGBON1" target="_blank" rel="noopener">Book on WhatsApp</a>
         <a class="btn btn--ghost" href="https://www.instagram.com/kerem.g.tatt/" target="_blank" rel="noopener">@kerem.g.tatt</a>
       </div>
     </div>
-    <figure class="hero__img">
-      <img src="img/tattoo-01.jpg" width="512" height="640" alt="Micro-realism tattoo of a plate with fish on an upper arm" fetchpriority="high">
-    </figure>
+    <a class="scroll-cue" href="#statement" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <section class="statement" id="statement">
+    <p class="statement__text" data-words>Every piece is drawn for one person, one place on the body, and the years it will live there.</p>
   </section>
 
   <section class="work" id="work">
-    <h2 class="section-title">Selected work</h2>
-    <div class="grid">
-      <button class="tile" type="button" data-index="0"><img src="img/tattoo-04.jpg" width="480" height="640" alt="Portrait of a Persian cat" loading="lazy"></button>
-      <button class="tile" type="button" data-index="1"><img src="img/tattoo-08.jpg" width="480" height="640" alt="Heart and brain joined by a tightrope with a tiny walking figure" loading="lazy"></button>
-      <button class="tile" type="button" data-index="2"><img src="img/tattoo-10.jpg" width="480" height="640" alt="Smiling dog lying down" loading="lazy"></button>
-      <button class="tile" type="button" data-index="3"><img src="img/tattoo-11.jpg" width="480" height="640" alt="Portrait of a husky" loading="lazy"></button>
-      <button class="tile" type="button" data-index="4"><img src="img/tattoo-06.jpg" width="480" height="640" alt="Child's drawing of a house on grid paper" loading="lazy"></button>
-      <button class="tile" type="button" data-index="5"><img src="img/tattoo-07.jpg" width="480" height="640" alt="Portrait of a cat" loading="lazy"></button>
-      <button class="tile" type="button" data-index="6"><img src="img/tattoo-12.jpg" width="640" height="640" alt="Two vases with birds and flowers" loading="lazy"></button>
-      <button class="tile" type="button" data-index="7"><img src="img/tattoo-01.jpg" width="512" height="640" alt="Plate with fish" loading="lazy"></button>
-      <button class="tile" type="button" data-index="8"><img src="img/tattoo-03.jpg" width="480" height="640" alt="Victorian mirror stencil before tattooing" loading="lazy"></button>
-      <button class="tile" type="button" data-index="9"><img src="img/tattoo-02.jpg" width="360" height="640" alt="Kerem Studio" loading="lazy"></button>
+    <div class="section-head">
+      <h2 class="label">Selected work</h2>
+      <div class="filters" aria-label="Filter work">
+        <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter="pets" aria-pressed="false">Pets</button>
+        <button class="chip" type="button" data-filter="portraits" aria-pressed="false">Portraits</button>
+        <button class="chip" type="button" data-filter="objects" aria-pressed="false">Objects</button>
+      </div>
+    </div>
+    <div class="grid" id="grid">
+      <button class="tile reveal" type="button" data-index="0" data-cat="pets" style="--i:0"><img src="img/tattoo-04.jpg" width="480" height="640" alt="Portrait of a Persian cat" loading="lazy"><span class="tile__cap">Persian cat <em>· upper arm</em></span></button>
+      <button class="tile reveal" type="button" data-index="1" data-cat="objects" style="--i:1"><img src="img/tattoo-08.jpg" width="480" height="640" alt="Heart and brain joined by a tightrope with a tiny walking figure" loading="lazy"><span class="tile__cap">Heart &amp; brain <em>· inner arm</em></span></button>
+      <button class="tile reveal" type="button" data-index="2" data-cat="pets" style="--i:2"><img src="img/tattoo-10.jpg" width="480" height="640" alt="Smiling dog lying down" loading="lazy"><span class="tile__cap">Smiling dog <em>· forearm</em></span></button>
+      <button class="tile reveal" type="button" data-index="3" data-cat="pets" style="--i:3"><img src="img/tattoo-11.jpg" width="480" height="640" alt="Portrait of a husky" loading="lazy"><span class="tile__cap">Husky <em>· forearm</em></span></button>
+      <button class="tile reveal" type="button" data-index="4" data-cat="objects" style="--i:4"><img src="img/tattoo-06.jpg" width="480" height="640" alt="Child's drawing of a house on grid paper" loading="lazy"><span class="tile__cap">A child's drawing <em>· upper arm</em></span></button>
+      <button class="tile reveal" type="button" data-index="5" data-cat="pets" style="--i:5"><img src="img/tattoo-07.jpg" width="480" height="640" alt="Portrait of a cat" loading="lazy"><span class="tile__cap">Cat portrait <em>· forearm</em></span></button>
+      <button class="tile reveal" type="button" data-index="6" data-cat="objects" style="--i:6"><img src="img/tattoo-12.jpg" width="640" height="640" alt="Two vases with birds and flowers" loading="lazy"><span class="tile__cap">Two vases <em>· both forearms</em></span></button>
+      <button class="tile reveal" type="button" data-index="7" data-cat="objects" style="--i:7"><img src="img/tattoo-01.jpg" width="512" height="640" alt="Plate with fish" loading="lazy"><span class="tile__cap">Plate with fish <em>· upper arm</em></span></button>
+      <button class="tile reveal" type="button" data-index="8" data-cat="portraits" style="--i:8"><img src="img/tattoo-03.jpg" width="480" height="640" alt="Victorian mirror stencil before tattooing" loading="lazy"><span class="tile__cap">Mirror, stencil stage <em>· thigh</em></span></button>
+      <button class="tile reveal" type="button" data-index="9" data-cat="portraits" style="--i:9"><img src="img/tattoo-02.jpg" width="360" height="640" alt="Kerem Studio sign among monstera leaves" loading="lazy"><span class="tile__cap">Kerem Studio <em>· Haifa</em></span></button>
+    </div>
+  </section>
+
+  <section class="loupe-section" id="detail">
+    <div class="section-head">
+      <h2 class="label">The detail</h2>
+      <p class="muted">Needle-level work. Move over the image.</p>
+    </div>
+    <div class="loupe reveal" id="loupe" data-zoom="2.5">
+      <img class="loupe__img" src="img/tattoo-11.jpg" width="480" height="640" alt="Portrait of a husky, large view" loading="lazy">
+      <div class="loupe__lens" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <h2 class="label">Process</h2>
+    <div class="steps">
+      <div class="rule" data-rule></div>
+      <article class="step reveal" style="--i:0"><span class="step__n">01</span><h3>Send a photo</h3><p>Your pet, an object, a moment. A short note on placement and size.</p></article>
+      <article class="step reveal" style="--i:1"><span class="step__n">02</span><h3>Design</h3><p>I draw it for your body. You see the design before the day.</p></article>
+      <article class="step reveal" style="--i:2"><span class="step__n">03</span><h3>Session</h3><p>Most pieces take one quiet sitting at Kerem Studio.</p></article>
+      <article class="step reveal" style="--i:3"><span class="step__n">04</span><h3>Heal</h3><p>Aftercare guide and a free touch-up when it's settled.</p></article>
     </div>
   </section>
 
   <section class="about" id="about">
-    <img class="about__avatar" src="img/profile.jpg" width="150" height="150" alt="Kerem Gavriel">
-    <div>
-      <h2 class="section-title">About</h2>
-      <p>I'm Kerem, a tattoo artist based in Haifa. I work in micro realism: small, precise pieces, mostly portraits of pets, personal objects and quiet moments.</p>
+    <figure class="about__portrait reveal" data-placeholder="portrait">
+      <img src="img/profile.jpg" width="150" height="150" alt="Kerem Gavriel" loading="lazy">
+      <figcaption class="placeholder-note">Replace with an editorial portrait</figcaption>
+    </figure>
+    <div class="about__text reveal" style="--i:1">
+      <h2 class="label">About</h2>
+      <p class="about__lead">I'm Kerem, a tattoo artist based in Haifa. I work in micro realism: small, precise pieces, mostly portraits of pets, personal objects and quiet moments.</p>
       <p>Everything happens at Kerem Studio, a calm and clean space. Each tattoo is planned together with you, from the first idea to the stencil.</p>
+      <dl class="stats">
+        <div><dt>Instagram</dt><dd>12.7K</dd></div>
+        <div><dt>Studio</dt><dd>Kerem Studio</dd></div>
+        <div><dt>City</dt><dd>Haifa</dd></div>
+      </dl>
     </div>
   </section>
 
   <section class="book" id="book">
-    <h2 class="display display--sm">Let's talk</h2>
-    <p class="lede">Send a message with your idea, placement and rough size. I'll reply with a proposal and a date.</p>
-    <a class="btn btn--primary btn--lg" href="https://wa.me/message/LAB4DCIWYGBON1" target="_blank" rel="noopener">Book on WhatsApp</a>
-    <p class="muted">Kerem Studio · Haifa, Israel · <a href="https://www.instagram.com/kerem.g.tatt/" target="_blank" rel="noopener">Instagram</a></p>
+    <h2 class="book__title reveal">Let's talk</h2>
+    <p class="book__lede reveal" style="--i:1">Send a message with your idea, placement and rough size.<br>I'll reply with a proposal and a date.</p>
+    <a class="btn btn--primary btn--lg reveal" style="--i:2" href="https://wa.me/message/LAB4DCIWYGBON1" target="_blank" rel="noopener">Book on WhatsApp</a>
+    <p class="muted reveal" style="--i:3" data-placeholder="pricing">Minimum ₪— · Deposit ₪— · Reply within 48h</p>
   </section>
 </main>
 
 <footer class="footer">
   <span>© <span id="year"></span> Kerem Gavriel</span>
+  <nav class="footer__links" aria-label="Social">
+    <a href="https://www.instagram.com/kerem.g.tatt/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://wa.me/message/LAB4DCIWYGBON1" target="_blank" rel="noopener">WhatsApp</a>
+  </nav>
   <span class="muted">Sponsored by @biotat_</span>
 </footer>
 
@@ -83,6 +137,7 @@
   <p class="lightbox__counter" aria-live="polite"></p>
 </div>
 
-<script src="main.js"></script>
+<script src="lightbox.js"></script>
+<script src="effects.js"></script>
 </body>
 </html>
