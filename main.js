@@ -80,6 +80,7 @@
     build(); hydrate();
     x = targetX(index); y = 0; render();
     box.hidden = false; document.body.style.overflow = 'hidden';
+    document.querySelectorAll('header, main, footer').forEach(el => el.inert = true);
     box.style.opacity = reduceMotion ? '1' : '0';
     requestAnimationFrame(() => {
       box.style.transition = reduceMotion ? 'none' : 'opacity 180ms ease-out';
@@ -92,6 +93,7 @@
     box.style.opacity = '0';
     setTimeout(() => {
       box.hidden = true; document.body.style.overflow = '';
+      document.querySelectorAll('header, main, footer').forEach(el => el.inert = false);
       box.style.background = ''; box.style.transition = '';
       spring = null; cancelAnimationFrame(raf);
       lastTile && lastTile.focus();
@@ -108,12 +110,16 @@
   function project(v, rate = 0.998) { return (v / 1000) * rate / (1 - rate); }
 
   let ptr = null; // {id, sx, sy, ox, oy, axis, hist:[]}
-  let dragged = false; // suppress the click that follows a drag
+  let dragged = false;    // suppress the click that follows a drag
+  let dismissing = false; // a dismiss spring was in flight when the pointer went down
   const THRESH = 10;
 
   track.addEventListener('pointerdown', e => {
     if (e.button !== 0) return;
+    dragged = false;
+    const inflight = spring;                    // remember what we interrupted
     cancelAnimationFrame(raf); spring = null;   // interruptible: grab mid-flight
+    dismissing = !!(inflight && inflight.onDone);
     ptr = { id: e.pointerId, sx: e.clientX, sy: e.clientY, ox: x, oy: y, axis: null, hist: [[performance.now(), e.clientX, e.clientY]] };
   });
   track.addEventListener('pointermove', e => {
@@ -125,7 +131,7 @@
       track.setPointerCapture(e.pointerId);     // capture only once a drag is committed
     }
     ptr.hist.push([performance.now(), e.clientX, e.clientY]);
-    if (ptr.hist.length > 6) ptr.hist.shift();
+    if (ptr.hist.length > 10) ptr.hist.shift();
     if (ptr.axis === 'x') {
       let nx = ptr.ox + dx;
       const a = targetX(0), b = targetX(items.length - 1);
@@ -141,11 +147,22 @@
   function endPointer(e) {
     if (!ptr || e.pointerId !== ptr.id) return;
     const p = ptr; ptr = null;
-    if (!p.axis) return;                          // tap, not drag
+    if (!p.axis) {                                // tap, not drag: resume whatever was in flight
+      if (dismissing) { dismissing = false; close(); return; }
+      if (x !== targetX(index) || y !== 0) { dragged = true; animateTo(targetX(index), 0, { damping: 1 }); }
+      return;
+    }
+    dismissing = false;
     dragged = true;
-    const [t0, x0, y0] = p.hist[0], [t1, x1, y1] = p.hist[p.hist.length - 1];
-    const dt = Math.max(1, t1 - t0);
-    const vx = (x1 - x0) / dt * 1000, vy = (y1 - y0) / dt * 1000;
+    p.hist.push([performance.now(), e.clientX, e.clientY]);
+    const [t1, x1, y1] = p.hist[p.hist.length - 1];
+    const recent = p.hist.filter(h => t1 - h[0] <= 100);
+    let vx = 0, vy = 0;
+    if (recent.length >= 2) {
+      const [t0, x0, y0] = recent[0];
+      const dt = Math.max(1, t1 - t0);
+      vx = (x1 - x0) / dt * 1000; vy = (y1 - y0) / dt * 1000;
+    }
     if (p.axis === 'y') {
       const projected = y + project(vy);
       if (Math.abs(projected) > H * 0.3) {
@@ -168,7 +185,7 @@
   closeBtn.addEventListener('click', close);
   box.addEventListener('click', e => {
     if (dragged) { dragged = false; return; }
-    if (e.target === box || e.target === track) close();
+    if (e.target === box || e.target === track || e.target.classList.contains('lightbox__slide')) close();
   });
   document.addEventListener('keydown', e => {
     if (box.hidden) return;
