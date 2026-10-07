@@ -8,7 +8,7 @@ Goal: show the work, make booking one tap away. Success = visitor sees 6–8 tat
 
 ## Constraints
 - English, LTR, international editorial tone (changed from Hebrew on 2026-10-07 at the owner's request).
-- Light, minimalist theme. Dark mode follows `prefers-color-scheme`.
+- Dark, minimalist theme (owner's choice, 2026-10-07). Single theme; no light mode.
 - Static: `index.html`, `style.css`, `main.js`, `img/`. No build step, no framework, no dependencies.
 - Images: 12 scraped from Instagram at 640px (8 unique tattoos + 1 stencil shot + 1 studio frame; 2 duplicates dropped). Owner can replace files in `img/` with full-res later without code changes beyond `main.js` gallery list.
 - Mobile-first. Most traffic from Instagram link on phones.
@@ -34,7 +34,7 @@ Goal: show the work, make booking one tap away. Success = visitor sees 6–8 tat
 ## Design system (apple-design applied)
 - Font: `system-ui` stack (SF on Apple, Segoe/Roboto elsewhere); Hebrew falls back to system Hebrew faces.
 - Display: `clamp(2.5rem, 8vw, 5rem)`, `line-height: 1.02`, `letter-spacing: -0.02em`. Body: `1rem/1.6`, tracking 0.
-- Colors (tokens on `:root`): bg `#fafaf9`, fg `#111`, muted `#6b6b6b`, accent WhatsApp green `#25d366` only on CTA. Dark: bg `#0e0e0e`, fg `#f2f2f2`.
+- Colors (tokens on `:root`): bg `#0b0b0b`, fg `#f2f0ec`, muted `#8f8c86`, accent WhatsApp green `#25d366` only on CTA.
 - Spacing scale in `rem`. Gutters 16px phone, 32px+ desktop. Max content width 1200px.
 - Press feedback: `:active { transform: scale(.97) }` 100ms on buttons/tiles, triggered on pointer-down.
 - Motion: springs, damping 1.0 default; lightbox swipe release damping 0.8. `prefers-reduced-motion` → opacity cross-fades only. `prefers-reduced-transparency` → solid nav.
