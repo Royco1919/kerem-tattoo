@@ -1,6 +1,6 @@
 # Kerem Gavriel — Tattoo site
 
-Static one-page site. Hebrew, RTL.
+Static one-page portfolio. English, dark theme. No build step.
 
 ## Run locally
 ```bash
@@ -8,8 +8,19 @@ python3 -m http.server 8080
 ```
 Then open http://localhost:8080
 
-## Replace images
-Drop new files in `img/` and update `src`/`alt` in `index.html`. Keep roughly 4:5 or 1:1 ratio.
+## Files
+- `index.html` — all content and sections
+- `style.css` — design tokens, layout, motion
+- `lightbox.js` — full-screen viewer (swipe, drag-to-dismiss, keyboard)
+- `effects.js` — hero letter reveal, scroll reveals, nav hide, filters, The Loupe, parallax
+- `img/` — images (currently 640px Instagram grabs)
+
+## Placeholders to replace (search `data-placeholder`)
+1. **Portrait** — `img/profile.jpg` is a 150px avatar, blurred on purpose. Replace with an editorial photo (4:5, ≥1200px) and remove `data-placeholder` + the `<figcaption>`.
+2. **Pricing** — "Minimum ₪— · Deposit ₪— · Reply within 48h" in the Book section.
+3. **Images** — replace `img/tattoo-*.jpg` with full-resolution originals (≥1200px, 4:5). Keep the same filenames or update `src` in `index.html`.
+4. **Captions** — each tile has `subject · placement`; edit to match the real piece.
+5. **og:image** — make absolute after deploy, add `og:url`.
 
 ## Deploy
-Upload `index.html`, `style.css`, `main.js`, `img/` to any static host (Netlify drop, GitHub Pages, Cloudflare Pages).
+Upload `index.html`, `style.css`, `lightbox.js`, `effects.js`, `img/` to Netlify Drop, GitHub Pages or Cloudflare Pages.
