@@ -15,8 +15,8 @@
   const closeBtn = box.querySelector('.lightbox__close');
   const counter = box.querySelector('.lightbox__counter');
 
-  // RTL: index 0 is at x=0; next slide sits at -W (to the left).
-  const dir = -1;
+  // LTR: index 0 is at x=0; next slide sits at +W (to the right).
+  const dir = 1;
 
   let index = 0, lastTile = null, W = innerWidth, H = innerHeight;
   let x = 0, y = 0;            // presentation values (px)
@@ -173,8 +173,8 @@
   document.addEventListener('keydown', e => {
     if (box.hidden) return;
     if (e.key === 'Escape') close();
-    if (e.key === 'ArrowLeft') goTo(index + 1, 0, 1);   // RTL: left = next
-    if (e.key === 'ArrowRight') goTo(index - 1, 0, 1);
+    if (e.key === 'ArrowRight') goTo(index + 1, 0, 1);
+    if (e.key === 'ArrowLeft') goTo(index - 1, 0, 1);
   });
   addEventListener('resize', () => {
     if (box.hidden) return;

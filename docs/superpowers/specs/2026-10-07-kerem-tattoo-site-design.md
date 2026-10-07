@@ -7,7 +7,7 @@ One-page portfolio site for Kerem Gavriel (@kerem.g.tatt), micro-realism tattoo 
 Goal: show the work, make booking one tap away. Success = visitor sees 6–8 tattoos within 10 seconds and taps the WhatsApp button.
 
 ## Constraints
-- Hebrew, RTL. English only for the artist's handle/name where natural.
+- English, LTR, international editorial tone (changed from Hebrew on 2026-10-07 at the owner's request).
 - Light, minimalist theme. Dark mode follows `prefers-color-scheme`.
 - Static: `index.html`, `style.css`, `main.js`, `img/`. No build step, no framework, no dependencies.
 - Images: 12 scraped from Instagram at 640px (8 unique tattoos + 1 stencil shot + 1 studio frame; 2 duplicates dropped). Owner can replace files in `img/` with full-res later without code changes beyond `main.js` gallery list.
@@ -20,11 +20,11 @@ Goal: show the work, make booking one tap away. Success = visitor sees 6–8 tat
 - Sponsor: @biotat_ (footer mention)
 - Booking: WhatsApp `https://wa.me/message/LAB4DCIWYGBON1`
 - Instagram: `https://www.instagram.com/kerem.g.tatt/`
-- About copy (short, Hebrew, placeholder-free, can be edited by Kerem).
+- About copy (short, English, placeholder-free, can be edited by Kerem).
 
 ## Page structure
-1. **Nav** — sticky, translucent (`backdrop-filter`), name on the right (RTL start), links: עבודות / אודות / תור. Scroll-edge fade, no hard border.
-2. **Hero** — large display name, tagline, one primary CTA "קביעת תור בוואטסאפ", secondary link to Instagram. One hero image (tattoo-01 fish plate) with generous whitespace.
+1. **Nav** — sticky, translucent (`backdrop-filter`), name on the left, links: Work / About / Book. Scroll-edge fade, no hard border.
+2. **Hero** — large display name, tagline, one primary CTA "Book on WhatsApp", secondary link to Instagram. One hero image (tattoo-01 fish plate) with generous whitespace.
 3. **Gallery** — responsive grid (2 cols phone, 3 tablet, 4 desktop). Each tile: image, `object-fit: cover`, square. Tap opens lightbox.
 4. **Lightbox** — full-screen, swipe left/right between images, drag-down to dismiss with 1:1 tracking, velocity-projected snap, rubber-band at ends, close on Escape/backdrop. Spring-based motion via Web Animations + rAF; no CSS keyframes for the gesture path.
 5. **About** — 2–3 sentences, small round profile photo.
