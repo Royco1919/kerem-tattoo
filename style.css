@@ -198,6 +198,9 @@ main { position: relative; z-index: 1; }
 .js .settle { opacity: 0; transform: translateY(14px); transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out); transition-delay: calc(var(--i, 0) * 70ms); }
 .js .settle.is-in { opacity: 1; transform: none; }
 
+.static .settle, .static .lens, .static .nav, .static .rail__bead { transition: none !important; }
+.static html, .static { scroll-behavior: auto !important; }
+
 /* ---------- Lightbox ---------- */
 .lightbox {
   position: fixed; inset: 0; z-index: 50; background: rgba(8,20,16,.97); color: var(--ivory); overflow: hidden;

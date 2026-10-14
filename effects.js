@@ -1,5 +1,9 @@
 (() => {
   'use strict';
+  // ?static=1 settles every reveal instantly (used for screenshot capture); loupe behaviour is unchanged
+  const Q = new URLSearchParams(location.search);
+  const STATIC = Q.has('static');
+  if (STATIC) { document.documentElement.classList.add('static'); document.querySelectorAll('img[loading=lazy]').forEach(i => i.loading = 'eager'); if (Q.has('y')) addEventListener('load', () => scrollTo(0, parseInt(Q.get('y'), 10) || 0)); }
   const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const FINE = matchMedia('(hover: hover) and (pointer: fine)').matches;
   const yearEl = document.getElementById('year');
@@ -18,7 +22,7 @@
   document.querySelectorAll('.book > *').forEach((el, i) => el.style.setProperty('--i', String(i)));
 
   const show = el => el.classList.add('is-in');
-  if (RM || !('IntersectionObserver' in window)) {
+  if (RM || STATIC || !('IntersectionObserver' in window)) {
     settlers.forEach(show);
   } else {
     const heroEls = settlers.filter(el => el.closest('.hero'));
