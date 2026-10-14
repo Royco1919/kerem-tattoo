@@ -148,7 +148,8 @@ main { position: relative; z-index: 1; }
 .hero__rule { grid-area: rule; height: 1px; background: linear-gradient(90deg, var(--brass), var(--brass-soft) 70%, transparent); margin: .5rem 0 .25rem; }
 .hero__place { grid-area: place; color: var(--text-soft); font-size: .9375rem; letter-spacing: .02em; }
 .stone--hero { grid-area: stone; width: min(100%, 420px); margin-top: 1.25rem; }
-.stone--hero .stone__btn img { aspect-ratio: auto; height: min(52svh, 520px); }
+.stone--hero .stone__btn img { aspect-ratio: auto; height: min(46svh, 520px); }
+@media (max-height: 760px) and (max-width: 899px) { .hero { padding-top: 4.5rem; gap: .5rem; } .stone--hero { margin-top: .75rem; } .stone--hero .stone__btn img { height: min(40svh, 400px); } .hero__hint { display: none; } }
 .hero__foot { grid-area: foot; display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: center; margin-top: .5rem; }
 .hero__hint { grid-area: hint; color: var(--text-soft); font-size: .8125rem; }
 @media (min-width: 900px) {
