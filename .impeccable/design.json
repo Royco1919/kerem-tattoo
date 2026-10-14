@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-14T15:52:47.407641+00:00",
+  "title": "Design System: Kerem Gavriel, The Jeweler's Velvet Tray",
+  "extensions": {
+    "colorMeta": {
+      "velvet": {
+        "role": "neutral",
+        "displayName": "Deep Velvet",
+        "canonical": "#0e1f18",
+        "tonalRamp": [
+          "#183529",
+          "#2a5d48",
+          "#3c8567",
+          "#4ead86",
+          "#75c1a2",
+          "#9dd3bd",
+          "#c5e5d8",
+          "#edf7f3"
+        ]
+      },
+      "velvet-hi": {
+        "role": "neutral",
+        "displayName": "Velvet Highlight",
+        "canonical": "#1b332a",
+        "tonalRamp": [
+          "#1a3229",
+          "#2f5849",
+          "#437e68",
+          "#57a487",
+          "#7cbaa3",
+          "#a2cebd",
+          "#c8e2d8",
+          "#eef6f3"
+        ]
+      },
+      "velvet-lo": {
+        "role": "neutral",
+        "displayName": "Velvet Shadow",
+        "canonical": "#081410",
+        "tonalRamp": [
+          "#16372c",
+          "#27604d",
+          "#378a6e",
+          "#48b490",
+          "#70c6a9",
+          "#9ad6c2",
+          "#c3e7db",
+          "#edf8f4"
+        ]
+      },
+      "brass": {
+        "role": "primary",
+        "displayName": "Brass",
+        "canonical": "#b89560",
+        "tonalRamp": [
+          "#352918",
+          "#5d492a",
+          "#85683c",
+          "#ae884e",
+          "#c1a374",
+          "#d3be9d",
+          "#e5d8c5",
+          "#f7f3ed"
+        ]
+      },
+      "ivory": {
+        "role": "neutral",
+        "displayName": "Ivory",
+        "canonical": "#efe8d8",
+        "tonalRamp": [
+          "#362d16",
+          "#604e27",
+          "#897038",
+          "#b29249",
+          "#c5ab71",
+          "#d6c49a",
+          "#e7dcc4",
+          "#f8f4ed"
+        ]
+      },
+      "ivory-2": {
+        "role": "neutral",
+        "displayName": "Ivory Shade",
+        "canonical": "#e4dac4",
+        "tonalRamp": [
+          "#342c18",
+          "#5c4d2a",
+          "#846e3d",
+          "#ac8f4f",
+          "#c0a976",
+          "#d2c29e",
+          "#e5dbc6",
+          "#f7f4ee"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#0a0a0a",
+        "tonalRamp": [
+          "#262626",
+          "#434343",
+          "#616161",
+          "#7e7e7e",
+          "#9b9b9b",
+          "#b8b8b8",
+          "#d5d5d5",
+          "#f2f2f2"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "#5a5346",
+        "tonalRamp": [
+          "#2b2821",
+          "#4c463b",
+          "#6d6454",
+          "#8d826e",
+          "#a79f8e",
+          "#c1bbaf",
+          "#dad7d0",
+          "#f4f3f1"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Warm Paper Text",
+        "canonical": "#ede7da",
+        "tonalRamp": [
+          "#332b19",
+          "#5b4c2c",
+          "#826d3f",
+          "#a98e52",
+          "#bda878",
+          "#d1c19f",
+          "#e4dac7",
+          "#f7f4ee"
+        ]
+      },
+      "text-soft": {
+        "role": "neutral",
+        "displayName": "Muted Paper Text",
+        "canonical": "#a9a697",
+        "tonalRamp": [
+          "#2a2923",
+          "#4a483d",
+          "#6a6757",
+          "#8a8672",
+          "#a4a191",
+          "#bfbcb1",
+          "#d9d8d1",
+          "#f3f3f1"
+        ]
+      },
+      "brass-soft": {
+        "role": "primary",
+        "displayName": "Brass Hairline",
+        "canonical": "rgba(184,149,96,.42)",
+        "tonalRamp": [
+          "#352918",
+          "#5d492a",
+          "#85683c",
+          "#ae884e",
+          "#c1a374",
+          "#d3be9d",
+          "#e5d8c5",
+          "#f7f3ed"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Artist name in the hero only."
+      },
+      "display-italic": {
+        "displayName": "Display Italic",
+        "purpose": "Booking title and the statement."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "About lead."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Ledes and supporting copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase brass nav links and lightbox counter."
+      },
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "Captions and actions on ivory tags."
+      }
+    },
+    "shadows": [
+      {
+        "name": "stone-rest",
+        "value": "0 30px 60px -20px rgba(0,0,0,.85), 0 12px 24px -8px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.04)",
+        "purpose": "Every stone image."
+      },
+      {
+        "name": "stone-hover",
+        "value": "0 40px 70px -22px rgba(0,0,0,.9), 0 16px 28px -8px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.06)",
+        "purpose": "Stone on fine-pointer hover with 2px lift."
+      },
+      {
+        "name": "tag",
+        "value": "0 1px 0 rgba(255,255,255,.35) inset, 0 6px 14px rgba(0,0,0,.45), 0 1px 2px rgba(0,0,0,.4)",
+        "purpose": "Ivory tags."
+      },
+      {
+        "name": "tag-button-hover",
+        "value": "0 1px 0 rgba(255,255,255,.35) inset, 0 10px 22px rgba(0,0,0,.5), 0 0 0 3px rgba(184,149,96,.42)",
+        "purpose": "Tag button hover."
+      },
+      {
+        "name": "loupe",
+        "value": "0 24px 48px -10px rgba(0,0,0,.8), 0 0 0 6px rgba(8,20,16,.55), inset 0 0 0 1px rgba(0,0,0,.5), inset 0 0 40px rgba(0,0,0,.25)",
+        "purpose": "The lens, highest plane."
+      }
+    ],
+    "motion": [
+      {
+        "name": "settle",
+        "value": "320ms cubic-bezier(.23,1,.32,1), opacity + translateY(12px), 60ms stagger per index",
+        "purpose": "Reveal: a stone settling onto velvet."
+      },
+      {
+        "name": "loupe",
+        "value": "opacity 220ms, transform 320ms, cubic-bezier(.23,1,.32,1), scale .7 to 1",
+        "purpose": "Lens appear."
+      },
+      {
+        "name": "press",
+        "value": "scale(.97) translateY(1px), 160ms",
+        "purpose": "Tag button active."
+      },
+      {
+        "name": "stone-hover",
+        "value": "500ms cubic-bezier(.23,1,.32,1)",
+        "purpose": "Stone lift."
+      },
+      {
+        "name": "nav",
+        "value": "transform 420ms cubic-bezier(.2,.7,.2,1); background 300ms",
+        "purpose": "Nav hide/show and glass."
+      },
+      {
+        "name": "rail-bead",
+        "value": "transform 120ms linear",
+        "purpose": "Scroll position."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "600px (nav brand hidden, lens 140px, link size down)"
+      },
+      {
+        "name": "stones-one-column",
+        "value": "639px and below: one full-width stone per row"
+      },
+      {
+        "name": "stones-alternate",
+        "value": "640px: 560px stones alternating"
+      },
+      {
+        "name": "steps-two",
+        "value": "720px"
+      },
+      {
+        "name": "hero-two-column",
+        "value": "900px (about two-column too)"
+      },
+      {
+        "name": "steps-four",
+        "value": "1000px"
+      },
+      {
+        "name": "short-phone",
+        "value": "max-height 760px and max-width 899px: hero stone 36svh"
+      }
+    ],
+    "material": {
+      "velvet": "Two fixed radial sheens plus feTurbulence pile (baseFrequency .55 .9, 3 octaves, seed 7) at .07 opacity, soft-light. No periodic stripe."
+    },
+    "devFlags": [
+      {
+        "name": "?static=1",
+        "purpose": "Dev only: disables reveal/nav/lens transitions, eager-loads images, optional &y= scroll. For screenshot capture."
+      }
+    ],
+    "placeholders": [
+      "150px avatar upscaled (grayscale, .6px blur)",
+      "640px tattoo sources magnified beyond native",
+      "pricing slot empty and hidden"
+    ]
+  },
+  "components": [
+    {
+      "name": "Caption Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Ivory stock tag with punched hole; carries subject, placement, size.",
+      "html": "<span class=\"ds-tag\"><i class=\"ds-hole\"></i>Husky <em>forearm, 5 cm</em></span>",
+      "css": ".ds-tag{display:inline-flex;align-items:center;gap:.55rem;background:linear-gradient(180deg,var(--ivory,#efe8d8),var(--ivory-2,#e4dac4));color:#0a0a0a;font:500 .8125rem/1.25 Manrope,system-ui,sans-serif;padding:.6rem .9rem .6rem .8rem;border-radius:2px;box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 6px 14px rgba(0,0,0,.45),0 1px 2px rgba(0,0,0,.4);white-space:nowrap}.ds-tag em{font-style:normal;color:#5a5346;font-weight:400}.ds-hole{width:7px;height:7px;border-radius:50%;background:#081410;box-shadow:0 0 0 1.5px rgba(10,10,10,.18);flex:none}"
+    },
+    {
+      "name": "Book Button (Tag Button)",
+      "kind": "button",
+      "refersTo": "tag-button",
+      "description": "The only call to action: an ivory tag with a brass edge.",
+      "html": "<a class=\"ds-tag ds-btn\" href=\"#\">Book on WhatsApp</a>",
+      "css": ".ds-tag{display:inline-flex;align-items:center;gap:.55rem;background:linear-gradient(180deg,var(--ivory,#efe8d8),var(--ivory-2,#e4dac4));color:#0a0a0a;font:500 .8125rem/1.25 Manrope,system-ui,sans-serif;padding:.6rem .9rem .6rem .8rem;border-radius:2px;box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 6px 14px rgba(0,0,0,.45),0 1px 2px rgba(0,0,0,.4);white-space:nowrap}.ds-tag em{font-style:normal;color:#5a5346;font-weight:400}.ds-hole{width:7px;height:7px;border-radius:50%;background:#081410;box-shadow:0 0 0 1.5px rgba(10,10,10,.18);flex:none}.ds-btn{border:1px solid #b89560;padding:.8rem 1.25rem;font-weight:600;font-size:.875rem;letter-spacing:.02em;cursor:pointer;text-decoration:none;transition:transform 160ms cubic-bezier(.23,1,.32,1),box-shadow 200ms cubic-bezier(.23,1,.32,1)}.ds-btn:hover{box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 10px 22px rgba(0,0,0,.5),0 0 0 3px rgba(184,149,96,.42)}.ds-btn:focus-visible{outline:2px solid #b89560;outline-offset:4px}.ds-btn:active{transform:scale(.97) translateY(1px)}"
+    },
+    {
+      "name": "Stone",
+      "kind": "card",
+      "refersTo": "stone",
+      "description": "A portfolio image on velvet with a lying shadow.",
+      "html": "<figure class=\"ds-stone\"><img alt=\"\" width=\"200\" height=\"250\" style=\"background:#1b332a\"></figure>",
+      "css": ".ds-stone{margin:0;width:200px;background:#0e1f18;padding:24px}.ds-stone img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px;box-shadow:0 30px 60px -20px rgba(0,0,0,.85),0 12px 24px -8px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.04);transition:transform 500ms cubic-bezier(.23,1,.32,1)}.ds-stone:hover img{transform:translateY(-2px)}"
+    },
+    {
+      "name": "Loupe",
+      "kind": "custom",
+      "refersTo": "loupe",
+      "description": "Brass-ringed magnifying lens that follows the pointer over a stone.",
+      "html": "<div class=\"ds-lens\"></div>",
+      "css": ".ds-lens{width:190px;height:190px;border-radius:50%;border:1px solid #b89560;background:#081410;box-shadow:0 24px 48px -10px rgba(0,0,0,.8),0 0 0 6px rgba(8,20,16,.55),inset 0 0 0 1px rgba(0,0,0,.5),inset 0 0 40px rgba(0,0,0,.25);transition:transform 320ms cubic-bezier(.23,1,.32,1)}"
+    },
+    {
+      "name": "Rail with Bead",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "One brass hairline down the page with a bead marking scroll position.",
+      "html": "<div class=\"ds-rail\"><i class=\"ds-bead\"></i></div>",
+      "css": ".ds-rail{position:relative;width:1px;height:120px;margin-left:12px;background:rgba(184,149,96,.42)}.ds-bead{position:absolute;left:-3px;top:30px;width:7px;height:7px;border-radius:50%;background:#b89560;box-shadow:0 0 0 3px #0e1f18,0 2px 6px rgba(0,0,0,.6)}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Brass uppercase links with a Bodoni brand and a tag button; glass once scrolled.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\">Kerem Gavriel</a><span class=\"ds-links\"><a href=\"#\">Work</a><a href=\"#\">Process</a><a href=\"#\">About</a><a href=\"#\">Book</a></span></nav>",
+      "css": ".ds-nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;background:rgba(8,20,16,.72);backdrop-filter:blur(18px) saturate(140%)}.ds-brand{font:400 1.25rem/1 'Bodoni Moda',Didot,serif;color:#efe8d8;text-decoration:none}.ds-links{display:flex;gap:1.5rem}.ds-links a{font:500 .75rem/1 Manrope,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b89560;text-decoration:none;transition:color 200ms}.ds-links a:hover{color:#efe8d8}.ds-links a:focus-visible{outline:2px solid #b89560;outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Jeweler's Velvet Tray",
+    "overview": "Every tattoo is a cut stone laid on green velvet, captioned by a stock tag, and proved by a loupe. Pieces are shown one at a time at stone scale, never as a thumbnail wall, and no two stones touch. Brass is rationed to what responds; ivory belongs to tags; depth is three planes: tray, tag, lens.",
+    "keyCharacteristics": [
+      "Deep green velvet ground with sheen and pile, never flat black.",
+      "One 1px brass rail down the whole page with a bead that marks scroll position.",
+      "Ivory stock tags with a punched hole carry every caption and every action.",
+      "A brass-ringed loupe magnifies any stone on hover or long-press.",
+      "Motion is a stone settling: short, exponential ease-out."
+    ],
+    "rules": [
+      {
+        "name": "The Rationed Brass Rule",
+        "body": "Brass appears only on what responds to the visitor. If it does not act, it is not brass.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ivory Is Paper Rule",
+        "body": "Ivory fills are tags. Headline ivory on velvet is text, never a panel.",
+        "section": "colors"
+      },
+      {
+        "name": "The Hairline Stays Large Rule",
+        "body": "Bodoni is used at 20px and up only; below that Manrope takes over so the hairlines never thin out.",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Touch Rule",
+        "body": "Stones never touch or overlap each other; caption tags may overhang their own stone by .75rem.",
+        "section": "layout"
+      },
+      {
+        "name": "The Three Planes Rule",
+        "body": "Tray, tag, lens. A fourth plane means something is wrong.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep brass to elements that respond: rail, nav, loupe, button edges, focus ring.",
+      "Do caption every stone with an ivory tag carrying a hole and ink text.",
+      "Do give each stone its lying shadow and leave empty velvet between stones.",
+      "Do keep Bodoni at 20px and up; Manrope for everything smaller.",
+      "Do keep a visible 2px brass focus ring with 4px offset.",
+      "Do keep one stone per row at 639px and below, full width."
+    ],
+    "donts": [
+      "Don't fill panels with ivory or use brass as decoration.",
+      "Don't build a thumbnail grid or let stones touch.",
+      "Don't use flat black grounds or a periodic stripe for the velvet nap.",
+      "Don't add hard-edged shadows; the third plane is the lens, not a fourth layer.",
+      "Don't invent prices, testimonials or healed photos; slots stay hidden until real."
+    ]
+  }
+}
