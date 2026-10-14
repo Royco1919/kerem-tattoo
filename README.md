@@ -1,6 +1,6 @@
 # Kerem Gavriel — Tattoo site
 
-Static one-page portfolio. English, dark theme. No build step.
+Static one-page portfolio. English. Visual world: "The Jeweler's Velvet Tray" (see `.impeccable/surfaces/index-html.md` for the direction contract, `PRODUCT.md` for product truth).
 
 ## Run locally
 ```bash
@@ -10,17 +10,20 @@ Then open http://localhost:8080
 
 ## Files
 - `index.html` — all content and sections
-- `style.css` — design tokens, layout, motion
+- `style.css` — tokens (velvet, brass, ivory), layout, motion
 - `lightbox.js` — full-screen viewer (swipe, drag-to-dismiss, keyboard)
-- `effects.js` — hero letter reveal, scroll reveals, nav hide, filters, The Loupe, parallax
-- `img/` — images (currently 640px Instagram grabs)
+- `effects.js` — settle reveals, rail bead, nav, the loupe on every stone
+- `img/` — JPG + WebP (currently 640px Instagram grabs, two cropped to remove a watermark)
 
-## Placeholders to replace (search `data-placeholder`)
-1. **Portrait** — `img/profile-hero.jpg` (hero) is the 150px Instagram avatar upscaled; `img/profile.jpg` (About) is the same, blurred on purpose. Replace with an editorial photo (4:5, ≥1200px) and remove `data-placeholder` + the `<figcaption>`.
-2. **Pricing** — "Minimum ₪— · Deposit ₪— · Reply within 48h" in the Book section.
-3. **Images** — replace `img/tattoo-*.jpg` with full-resolution originals (≥1200px, 4:5). Keep the same filenames or update `src` in `index.html`.
-4. **Captions** — each tile has `subject · placement`; edit to match the real piece.
-5. **og:image** — make absolute after deploy, add `og:url`.
+## Capture / review flag
+`?static=1` settles every reveal instantly and eager-loads images; `&y=<px>` scrolls to an offset. Used only for screenshots.
+
+## Placeholders to replace
+1. **Portrait** (`img/profile-hero.*`, `data-placeholder="portrait"`): a 150px avatar upscaled. Replace with a real portrait, 1:1 or 4:5, ≥1200px, and remove `data-placeholder`.
+2. **Originals**: replace every `img/tattoo-*.jpg` with the full-resolution original (≥2000px long edge), regenerate WebP with `cwebp -q 82`. The loupe zoom (`data-zoom`) can go back up to 2.4 once sources are sharp.
+3. **Pricing / deposit / reply time**: a commented slot in the Book section.
+4. **Captions**: each tag reads `subject · placement · size`; sizes are estimates, confirm with Kerem.
+5. **og:image**: points at the husky; update if the hero stone changes.
 
 ## Deploy
-Upload `index.html`, `style.css`, `lightbox.js`, `effects.js`, `img/` to Netlify Drop, GitHub Pages or Cloudflare Pages.
+Copy `index.html`, `style.css`, `lightbox.js`, `effects.js`, `img/` into `dist/` and run `netlify deploy --prod --dir dist` (site: kerem-tattoo).
