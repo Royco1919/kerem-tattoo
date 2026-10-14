@@ -3,7 +3,7 @@
   // ?static=1 settles every reveal instantly (used for screenshot capture); loupe behaviour is unchanged
   const Q = new URLSearchParams(location.search);
   const STATIC = Q.has('static');
-  if (STATIC) { document.documentElement.classList.add('static'); document.querySelectorAll('img[loading=lazy]').forEach(i => i.loading = 'eager'); if (Q.has('y')) addEventListener('load', () => scrollTo(0, parseInt(Q.get('y'), 10) || 0)); }
+  if (STATIC) { document.documentElement.classList.add('static'); document.querySelectorAll('img[loading=lazy]').forEach(i => { i.loading = 'eager'; i.decoding = 'sync'; i.src = i.src; }); if (Q.has('y')) addEventListener('load', () => scrollTo(0, parseInt(Q.get('y'), 10) || 0)); }
   const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const FINE = matchMedia('(hover: hover) and (pointer: fine)').matches;
   const yearEl = document.getElementById('year');
