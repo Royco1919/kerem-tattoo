@@ -26,4 +26,8 @@ Then open http://localhost:8080
 5. **og:image**: points at the husky; update if the hero stone changes.
 
 ## Deploy
-Copy `index.html`, `style.css`, `lightbox.js`, `effects.js`, `img/` into `dist/` and run `netlify deploy --prod --dir dist` (site: kerem-tattoo).
+Live at https://royco1919.github.io/kerem-tattoo/ (GitHub Pages, branch `gh-pages` of Royco1919/kerem-tattoo).
+```bash
+rm -rf dist && mkdir dist && cp index.html style.css lightbox.js effects.js dist/ && cp -R img dist/ && touch dist/.nojekyll && cd dist && git init -q && git checkout -q -b gh-pages && git add -A && git commit -qm deploy && git push -qf https://github.com/Royco1919/kerem-tattoo.git gh-pages
+```
+The Netlify site (kerem-tattoo.netlify.app) still serves v2; its account is out of deploy credits.
