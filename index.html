@@ -4,20 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kerem Gavriel · Micro Realism Tattoo · Haifa</title>
-<meta name="description" content="Kerem Gavriel is a micro-realism tattoo artist based in Haifa, Israel. Fine-line portraits of pets, objects and small moments. Book on WhatsApp.">
+<meta name="description" content="Kerem Gavriel is a micro-realism tattoo artist in Haifa, Israel. Fine-line portraits of pets, objects and small moments. Book on WhatsApp.">
 <meta property="og:title" content="Kerem Gavriel · Micro Realism Tattoo · Haifa">
 <meta property="og:description" content="Fine-line micro-realism tattoos. Kerem Studio, Haifa.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kerem-tattoo.netlify.app/">
-<meta property="og:image" content="https://kerem-tattoo.netlify.app/img/profile-hero.jpg">
-<meta name="theme-color" content="#0b0b0b">
+<meta property="og:image" content="https://kerem-tattoo.netlify.app/img/tattoo-11.jpg">
+<meta name="theme-color" content="#0e1f18">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e1f18'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23b89560' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%23efe8d8'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap">
+<link rel="preload" as="image" href="img/tattoo-11.webp" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Manrope:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Manrope:wght@400;500;600&display=swap"></noscript>
 <script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip" href="#work">Skip to the work</a>
+<div class="rail" aria-hidden="true"><span class="rail__bead"></span></div>
 
 <header class="nav" id="nav">
   <a class="nav__brand" href="#top">Kerem Gavriel</a>
@@ -25,112 +30,141 @@
     <a href="#work">Work</a>
     <a href="#process">Process</a>
     <a href="#about">About</a>
-    <a class="nav__cta" href="https://wa.me/message/LAB4DCIWYGBON1" target="_blank" rel="noopener">Book</a>
+    <a class="tag tag--btn tag--nav" href="https://wa.me/message/LAB4DCIWYGBON1" target="_blank" rel="noopener">Book</a>
   </nav>
 </header>
 
 <main id="top">
-  <section class="hero">
-    <p class="label hero__eyebrow">Micro realism · Fineline · Haifa, Israel</p>
-    <h1 class="hero__title" aria-label="Kerem Gavriel">
-      <span class="hero__line" data-split>Kerem</span>
-      <span class="hero__line hero__line--2" data-split>Gavriel</span>
-    </h1>
-    <figure class="hero__img" data-parallax data-placeholder="hero-portrait">
-      <img src="img/profile-hero.jpg" width="640" height="640" alt="Kerem Gavriel" fetchpriority="high">
+  <section class="tray hero" aria-labelledby="name">
+    <h1 class="hero__name" id="name">Kerem Gavriel</h1>
+    <div class="hero__rule" aria-hidden="true"></div>
+    <p class="hero__place">Micro realism · Haifa, Israel</p>
+
+    <figure class="stone stone--hero" data-stone data-zoom="2.6" data-rest="47% 57%">
+      <button class="stone__btn" type="button" data-open="3" aria-label="Open the husky portrait">
+        <picture>
+          <source srcset="img/tattoo-11.webp" type="image/webp">
+          <img src="img/tattoo-11.jpg" width="480" height="640" alt="Micro-realism portrait of a husky on a forearm" fetchpriority="high" decoding="async">
+        </picture>
+      </button>
+      <span class="lens" aria-hidden="true"></span>
     </figure>
+
     <div class="hero__foot">
-      <p class="hero__lede">Fine lines. Small details.<br>A tattoo that stays with you.</p>
-      <div class="cta-row">
-        <a class="btn btn--primary" href="https://wa.me/message/LAB4DCIWYGBON1" target="_blank" rel="noopener">Book on WhatsApp</a>
-        <a class="btn btn--ghost" href="https://www.instagram.com/kerem.g.tatt/" target="_blank" rel="noopener">@kerem.g.tatt</a>
-      </div>
+      <p class="tag tag--caption"><span class="tag__hole"></span>Husky <em>· forearm · 5 cm</em></p>
+      <a class="tag tag--btn tag--primary" href="https://wa.me/message/LAB4DCIWYGBON1" target="_blank" rel="noopener">Book on WhatsApp</a>
     </div>
-    <a class="scroll-cue" href="#statement" aria-label="Scroll down"><span></span></a>
+    <p class="hero__hint"><span class="only-fine">Move over the stone to magnify.</span><span class="only-coarse">Press and hold the stone to magnify.</span></p>
   </section>
 
-  <section class="statement" id="statement">
-    <p class="statement__text" data-words>Every piece is drawn for one person, one place on the body, and the years it will live there.</p>
+  <section class="tray statement">
+    <p class="statement__text">Drawn for one person, one place on the body,<br class="br-wide"> and the years it will live there.</p>
   </section>
 
-  <section class="work" id="work">
-    <div class="section-head">
-      <h2 class="label">Selected work</h2>
-      <div class="filters" aria-label="Filter work">
-        <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
-        <button class="chip" type="button" data-filter="pets" aria-pressed="false">Pets</button>
-        <button class="chip" type="button" data-filter="studio" aria-pressed="false">Studio</button>
-        <button class="chip" type="button" data-filter="objects" aria-pressed="false">Objects</button>
-      </div>
-    </div>
-    <div class="grid" id="grid">
-      <button class="tile reveal" type="button" data-index="0" data-cat="pets" style="--i:0"><img src="img/tattoo-04.jpg" width="480" height="640" alt="Portrait of a Persian cat" loading="lazy"><span class="tile__cap">Persian cat <em>· upper arm</em></span></button>
-      <button class="tile reveal" type="button" data-index="1" data-cat="objects" style="--i:1"><img src="img/tattoo-08.jpg" width="480" height="640" alt="Heart and brain joined by a tightrope with a tiny walking figure" loading="lazy"><span class="tile__cap">Heart &amp; brain <em>· inner arm</em></span></button>
-      <button class="tile reveal" type="button" data-index="2" data-cat="pets" style="--i:2"><img src="img/tattoo-10.jpg" width="480" height="640" alt="Smiling dog lying down" loading="lazy"><span class="tile__cap">Smiling dog <em>· forearm</em></span></button>
-      <button class="tile reveal" type="button" data-index="3" data-cat="pets" style="--i:3"><img src="img/tattoo-11.jpg" width="480" height="640" alt="Portrait of a husky" loading="lazy"><span class="tile__cap">Husky <em>· forearm</em></span></button>
-      <button class="tile reveal" type="button" data-index="4" data-cat="objects" style="--i:4"><img src="img/tattoo-06.jpg" width="480" height="640" alt="Child's drawing of a house on grid paper" loading="lazy"><span class="tile__cap">A child's drawing <em>· upper arm</em></span></button>
-      <button class="tile reveal" type="button" data-index="5" data-cat="pets" style="--i:5"><img src="img/tattoo-07.jpg" width="480" height="640" alt="Portrait of a cat" loading="lazy"><span class="tile__cap">Cat portrait <em>· forearm</em></span></button>
-      <button class="tile reveal" type="button" data-index="6" data-cat="objects" style="--i:6"><img src="img/tattoo-12.jpg" width="640" height="640" alt="Two vases with birds and flowers" loading="lazy"><span class="tile__cap">Two vases <em>· both forearms</em></span></button>
-      <button class="tile reveal" type="button" data-index="7" data-cat="objects" style="--i:7"><img src="img/tattoo-01.jpg" width="512" height="640" alt="Plate with fish" loading="lazy"><span class="tile__cap">Plate with fish <em>· upper arm</em></span></button>
-      <button class="tile reveal" type="button" data-index="8" data-cat="studio" style="--i:8"><img src="img/tattoo-03.jpg" width="480" height="640" alt="Victorian mirror stencil before tattooing" loading="lazy"><span class="tile__cap">Mirror, stencil stage <em>· thigh</em></span></button>
-      <button class="tile reveal" type="button" data-index="9" data-cat="studio" style="--i:9"><img src="img/tattoo-02.jpg" width="360" height="640" alt="Kerem Studio sign among monstera leaves" loading="lazy"><span class="tile__cap">Kerem Studio <em>· Haifa</em></span></button>
+  <section class="tray work" id="work" aria-labelledby="work-h">
+    <h2 class="h2" id="work-h">On the tray</h2>
+    <p class="lede">Ten pieces, each at stone scale. Hover or hold to magnify. Tap to open.</p>
+    <div class="stones">
+      <figure class="stone" data-stone data-zoom="2.4" style="--i:0">
+        <button class="tile stone__btn" type="button" data-index="0" aria-label="Open: Persian cat">
+          <picture><source srcset="img/tattoo-04.webp" type="image/webp"><img src="img/tattoo-04.jpg" width="480" height="640" alt="Portrait of a Persian cat" loading="lazy" decoding="async"></picture>
+        </button><span class="lens" aria-hidden="true"></span>
+        <figcaption class="tag tag--caption"><span class="tag__hole"></span>Persian cat <em>· upper arm · 4 cm</em></figcaption>
+      </figure>
+      <figure class="stone" data-stone data-zoom="2.4" style="--i:1">
+        <button class="tile stone__btn" type="button" data-index="1" aria-label="Open: heart and brain">
+          <picture><source srcset="img/tattoo-08.webp" type="image/webp"><img src="img/tattoo-08.jpg" width="480" height="640" alt="Heart and brain joined by a tightrope with a tiny walking figure" loading="lazy" decoding="async"></picture>
+        </button><span class="lens" aria-hidden="true"></span>
+        <figcaption class="tag tag--caption"><span class="tag__hole"></span>Heart &amp; brain <em>· inner arm · 9 cm</em></figcaption>
+      </figure>
+      <figure class="stone" data-stone data-zoom="2.4" style="--i:2">
+        <button class="tile stone__btn" type="button" data-index="2" aria-label="Open: smiling dog">
+          <picture><source srcset="img/tattoo-10.webp" type="image/webp"><img src="img/tattoo-10.jpg" width="480" height="640" alt="Smiling dog lying down" loading="lazy" decoding="async"></picture>
+        </button><span class="lens" aria-hidden="true"></span>
+        <figcaption class="tag tag--caption"><span class="tag__hole"></span>Smiling dog <em>· forearm · 7 cm</em></figcaption>
+      </figure>
+      <figure class="stone" data-stone data-zoom="2.4" style="--i:3">
+        <button class="tile stone__btn" type="button" data-index="3" aria-label="Open: husky">
+          <picture><source srcset="img/tattoo-11.webp" type="image/webp"><img src="img/tattoo-11.jpg" width="480" height="640" alt="Portrait of a husky" loading="lazy" decoding="async"></picture>
+        </button><span class="lens" aria-hidden="true"></span>
+        <figcaption class="tag tag--caption"><span class="tag__hole"></span>Husky <em>· forearm · 5 cm</em></figcaption>
+      </figure>
+      <figure class="stone" data-stone data-zoom="2.4" style="--i:4">
+        <button class="tile stone__btn" type="button" data-index="4" aria-label="Open: a child's drawing">
+          <picture><source srcset="img/tattoo-06.webp" type="image/webp"><img src="img/tattoo-06.jpg" width="480" height="640" alt="Child's drawing of a house on grid paper" loading="lazy" decoding="async"></picture>
+        </button><span class="lens" aria-hidden="true"></span>
+        <figcaption class="tag tag--caption"><span class="tag__hole"></span>A child's drawing <em>· upper arm · 6 cm</em></figcaption>
+      </figure>
+      <figure class="stone" data-stone data-zoom="2.4" style="--i:5">
+        <button class="tile stone__btn" type="button" data-index="5" aria-label="Open: cat portrait">
+          <picture><source srcset="img/tattoo-07.webp" type="image/webp"><img src="img/tattoo-07.jpg" width="480" height="640" alt="Portrait of a cat" loading="lazy" decoding="async"></picture>
+        </button><span class="lens" aria-hidden="true"></span>
+        <figcaption class="tag tag--caption"><span class="tag__hole"></span>Cat portrait <em>· forearm · 4 cm</em></figcaption>
+      </figure>
+      <figure class="stone" data-stone data-zoom="2.4" style="--i:6">
+        <button class="tile stone__btn" type="button" data-index="6" aria-label="Open: two vases">
+          <picture><source srcset="img/tattoo-12.webp" type="image/webp"><img src="img/tattoo-12.jpg" width="640" height="640" alt="Two vases with birds and flowers" loading="lazy" decoding="async"></picture>
+        </button><span class="lens" aria-hidden="true"></span>
+        <figcaption class="tag tag--caption"><span class="tag__hole"></span>Two vases <em>· both forearms · 12 cm</em></figcaption>
+      </figure>
+      <figure class="stone" data-stone data-zoom="2.4" style="--i:7">
+        <button class="tile stone__btn" type="button" data-index="7" aria-label="Open: plate with fish">
+          <picture><source srcset="img/tattoo-01.webp" type="image/webp"><img src="img/tattoo-01.jpg" width="512" height="640" alt="Plate with fish" loading="lazy" decoding="async"></picture>
+        </button><span class="lens" aria-hidden="true"></span>
+        <figcaption class="tag tag--caption"><span class="tag__hole"></span>Plate with fish <em>· upper arm · 6 cm</em></figcaption>
+      </figure>
+      <figure class="stone" data-stone data-zoom="2.4" style="--i:8">
+        <button class="tile stone__btn" type="button" data-index="8" aria-label="Open: mirror stencil">
+          <picture><source srcset="img/tattoo-03.webp" type="image/webp"><img src="img/tattoo-03.jpg" width="480" height="640" alt="Victorian mirror stencil before tattooing" loading="lazy" decoding="async"></picture>
+        </button><span class="lens" aria-hidden="true"></span>
+        <figcaption class="tag tag--caption"><span class="tag__hole"></span>Mirror, stencil stage <em>· thigh · 14 cm</em></figcaption>
+      </figure>
+      <figure class="stone" data-stone data-zoom="2.4" style="--i:9">
+        <button class="tile stone__btn" type="button" data-index="9" aria-label="Open: Kerem Studio">
+          <picture><source srcset="img/tattoo-02.webp" type="image/webp"><img src="img/tattoo-02.jpg" width="360" height="640" alt="Kerem Studio sign among monstera leaves" loading="lazy" decoding="async"></picture>
+        </button><span class="lens" aria-hidden="true"></span>
+        <figcaption class="tag tag--caption"><span class="tag__hole"></span>Kerem Studio <em>· Haifa</em></figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="loupe-section" id="detail">
-    <div class="section-head">
-      <h2 class="label">The detail</h2>
-      <p class="muted">Needle-level work. <span class="only-fine">Move over the image.</span><span class="only-coarse">Press and hold the image.</span></p>
-    </div>
-    <div class="loupe reveal" id="loupe" data-zoom="2.5">
-      <img class="loupe__img" src="img/tattoo-11.jpg" width="480" height="640" alt="Portrait of a husky, large view" loading="lazy">
-      <div class="loupe__lens" aria-hidden="true"></div>
-    </div>
+  <section class="tray process" id="process" aria-labelledby="process-h">
+    <h2 class="h2" id="process-h">How a piece is made</h2>
+    <ol class="steps">
+      <li class="step"><span class="tag tag--step"><span class="tag__hole"></span>Send a photo</span><p>Your pet, an object, a moment. A short note on placement and size.</p></li>
+      <li class="step"><span class="tag tag--step"><span class="tag__hole"></span>Design</span><p>I draw it for your body. You see the design before the day.</p></li>
+      <li class="step"><span class="tag tag--step"><span class="tag__hole"></span>Session</span><p>Most pieces take one quiet sitting at Kerem Studio.</p></li>
+      <li class="step"><span class="tag tag--step"><span class="tag__hole"></span>Heal</span><p>Aftercare guide and a free touch-up once it has settled.</p></li>
+    </ol>
   </section>
 
-  <section class="process" id="process">
-    <h2 class="label">Process</h2>
-    <div class="steps">
-      <div class="rule" data-rule></div>
-      <article class="step reveal" style="--i:0"><span class="step__n">01</span><h3>Send a photo</h3><p>Your pet, an object, a moment. A short note on placement and size.</p></article>
-      <article class="step reveal" style="--i:1"><span class="step__n">02</span><h3>Design</h3><p>I draw it for your body. You see the design before the day.</p></article>
-      <article class="step reveal" style="--i:2"><span class="step__n">03</span><h3>Session</h3><p>Most pieces take one quiet sitting at Kerem Studio.</p></article>
-      <article class="step reveal" style="--i:3"><span class="step__n">04</span><h3>Heal</h3><p>Aftercare guide and a free touch-up when it's settled.</p></article>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <figure class="about__portrait reveal" data-placeholder="portrait">
-      <img src="img/profile.jpg" width="150" height="150" alt="Kerem Gavriel" loading="lazy">
-      <figcaption class="placeholder-note">Replace with an editorial portrait</figcaption>
+  <section class="tray about" id="about" aria-labelledby="about-h">
+    <figure class="stone stone--portrait" data-placeholder="portrait">
+      <picture><source srcset="img/profile-hero.webp" type="image/webp"><img src="img/profile-hero.jpg" width="640" height="640" alt="Kerem Gavriel" loading="lazy" decoding="async"></picture>
+      <figcaption class="tag tag--caption"><span class="tag__hole"></span>Kerem <em>· Kerem Studio, Haifa</em></figcaption>
     </figure>
-    <div class="about__text reveal" style="--i:1">
-      <h2 class="label">About</h2>
-      <p class="about__lead">I'm Kerem, a tattoo artist based in Haifa. I work in micro realism: small, precise pieces, mostly portraits of pets, personal objects and quiet moments.</p>
-      <p>Everything happens at Kerem Studio, a calm and clean space. Each tattoo is planned together with you, from the first idea to the stencil.</p>
-      <dl class="stats">
-        <div><dt>Instagram</dt><dd>12.7K</dd></div>
-        <div><dt>Studio</dt><dd>Kerem Studio</dd></div>
-        <div><dt>City</dt><dd>Haifa</dd></div>
-      </dl>
+    <div class="about__text">
+      <h2 class="h2" id="about-h">The hand behind the needle</h2>
+      <p class="about__lead">I'm Kerem, a tattoo artist in Haifa. I work in micro realism: small, precise pieces, mostly portraits of pets, personal objects and quiet moments.</p>
+      <p>Everything happens at Kerem Studio, my own calm and clean space. Each tattoo is planned together with you, from the first idea to the stencil. About 12,700 people follow the work on <a href="https://www.instagram.com/kerem.g.tatt/" target="_blank" rel="noopener">Instagram</a>.</p>
     </div>
   </section>
 
-  <section class="book" id="book">
-    <h2 class="book__title reveal">Let's talk</h2>
-    <p class="book__lede reveal" style="--i:1">Send a message with your idea, placement and rough size.<br>I'll reply with a proposal and a date.</p>
-    <a class="btn btn--primary btn--lg reveal" style="--i:2" href="https://wa.me/message/LAB4DCIWYGBON1" target="_blank" rel="noopener">Book on WhatsApp</a>
-    <p class="muted reveal" style="--i:3" data-placeholder="pricing">Minimum ₪— · Deposit ₪— · Reply within 48h</p>
+  <section class="tray book" id="book" aria-labelledby="book-h">
+    <h2 class="book__title" id="book-h">Let's talk</h2>
+    <p class="lede">Send a message with your idea, placement and rough size.<br class="br-wide"> I'll reply with a proposal and a date.</p>
+    <a class="tag tag--btn tag--primary tag--lg" href="https://wa.me/message/LAB4DCIWYGBON1" target="_blank" rel="noopener">Book on WhatsApp</a>
+    <!-- Pricing line goes here once Kerem supplies it: "Minimum ₪… · Deposit ₪… · Reply within 48h" -->
   </section>
 </main>
 
 <footer class="footer">
-  <span>© <span id="year"></span> Kerem Gavriel</span>
+  <span>© <span id="year"></span> Kerem Gavriel · Kerem Studio, Haifa</span>
   <nav class="footer__links" aria-label="Social">
-    <a href="https://www.instagram.com/kerem.g.tatt/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.instagram.com/kerem.g.tatt/" target="_blank" rel="noopener">@kerem.g.tatt</a>
     <a href="https://wa.me/message/LAB4DCIWYGBON1" target="_blank" rel="noopener">WhatsApp</a>
   </nav>
-  <span class="muted">Sponsored by @biotat_</span>
+  <span class="footer__sponsor">Sponsored by @biotat_</span>
 </footer>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
